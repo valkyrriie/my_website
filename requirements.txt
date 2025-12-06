@@ -1,6 +1,5 @@
 ﻿asgiref==3.9.1
 attrs==25.4.0
-autobahn==23.6.2
 Automat==25.4.16
 cffi==2.0.0
 channels==4.3.1
@@ -25,4 +24,5 @@ txaio==25.9.2
 typing_extensions==4.15.0
 tzdata==2025.2
 zope.interface==8.1.1
+
 
