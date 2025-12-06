@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sign in</title>
+    <link rel="stylesheet" href="{% static 'main/css/login.css' %}">
+    <link rel="icon" type="image/png" href="{% static 'main/images/icon.png' %}">
+</head>
+<body>
+
+    <h2 class="log">Sign-in</h2>
+    <form method="post">
+        {% csrf_token %}
+        {% for field in form %}
+            <div class="login_row">
+                {% if field.label == 'Username' %}
+                    <div class="username_data">
+                        {{ field.label }}
+                    </div> <!-- название поля-->
+                {% else %}
+                    <div class="password_data">
+                        {{ field.label }}
+                    </div> <!-- название поля-->
+                {% endif %}
+                <div class="login_input">
+                    {{ field }}
+                </div>
+            </div>
+        {% endfor %}
+        <button class='enter' type="submit">Log in</button>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>edit</title>
+        <link rel="stylesheet" href="{% static 'main/css/edit.css' %}">
+        <link rel="icon" type="image/png" href="{% static 'main/images/icon.png' %}">
+    </head>
+    <body>
+    <!-- Форма выбора дела -->
+        <form method="get">
+            <div class='select'><label for="deal-select">Выберите дело</label></div><br>
+            <div class='choice'><select name="deal_id" id="deal-select" onchange="this.form.submit()">
+                <option value="">Выберите</option>
+                {% for deal in deals %}
+                   <option value="{{ deal.id }}" {% if selected_deal and deal.id == selected_deal.id %}selected{% endif %}>
+                        {{ deal.time }}
+                    </option>
+                {% endfor %}
+            </select></div>
+        </form>
+
+<!-- Форма редактирования выбранного дела -->
+        {% if form %}
+            <form method="post">
+                {% csrf_token %}
+                {% for field in form %}
+                <div class="deal_row">
+                    <div class="deal_label">
+                        {% for char in field.label %}
+                            <span>{{ char }}</span>
+                        {% endfor %}
+                    </div> <!-- название поля-->
+                    <div class="deal_input">
+                        {{ field }}
+                    </div>  <!-- сам input, поле ввода -->
+                </div>
+
+                {% endfor %}
+
+                <input type="hidden" name="deal_id" value="{{ selected_deal.id }}">
+                <button type="submit" class="save">Сохранить</button>
+            </form>
+        {% endif %}
+    </body>
+</html>

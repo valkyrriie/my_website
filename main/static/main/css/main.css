@@ -1,0 +1,158 @@
+@font-face {
+    font-family: 'main-font';
+    src: url('fonts/Gohu.ttf') format('truetype');
+}
+
+* {
+    font-family: 'main-font';
+    padding: 0;
+    margin: 0;
+    cursor: url('img/normal.cur') 0 0, auto;
+}
+
+body {
+    background: #2B222E;
+}
+
+header {
+    display: flex;
+    align-items: center;       /* центр по вертикали */
+    justify-content: center;
+}
+
+#head-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#container {
+    position: relative; /* добавляем контекст для абсолютного позиционирования */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    width: 900px;
+    height: 340px;
+}
+
+#header-block {
+    background: #453147;
+    width: 225px;
+    height: 62px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center; /* Вертикальное выравнивание элементов внутри flex-контейнера по центру. */
+    justify-content: center; /* Горизонтальное выравнивание элементов внутри flex-контейнера по центру. */
+    font-size: 30px;
+    color: white;
+    margin-top: 70px;
+    transition: box-shadow 0.3s ease;
+    border: 3px solid #2F2130;
+}
+
+#header-block:hover {
+    transform: rotateY(360deg);
+    transition: 2s;
+    box-shadow: 0 0 10px 5px #D977ED;
+}
+
+
+@property --angle{
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+
+}
+#back {
+    position: absolute;
+    top: 10;
+    left: 10;
+    z-index: -1;
+    background-image: conic-gradient(from var(--angle), transparent 70%,#913E9C);
+    height: 360px;
+    width: 920px;
+    border-radius: 20px;
+    filter: blur(4px);
+    opacity: 1;
+    animation: 10s spin linear infinite;
+}
+
+@keyframes spin{
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
+}
+
+#main {
+    position: relative;
+    height: 300px;
+    width: 900px;
+    font-size: 20px;
+    display: flex;
+    background: #453147;
+    border: 3px solid #2F2130;
+    padding: 20px;
+    border-radius: 20px;
+    z-index: 0;
+    opacity: 1;
+    color: white;
+    opacity: 1;
+}
+
+
+
+.btn1, .btn2 {
+    display: inline-block;
+    position: relative;
+    border: 3px solid black;
+    border-radius: 20px;
+    font-size: 30px;
+    width: 140px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-240%, 60%);
+
+}
+.btn2 {
+    left: calc(50% + 100px);
+    transform: translate(-60%, 60%);
+}
+
+.btn1:hover, .btn2:hover {
+    background: #453147;
+    color: white;
+    border-color: white;
+}
+
+
+.look_link {
+    all: unset;
+}
+/*
+button {
+    background: #0F0F0F;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    transition: box-shadow 0.3s ease;
+}
+
+button:hover {
+    box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.8);
+}  создает свечение при наведение*/
+
+
+
+/*  _______ АНИМАЦИЯ ______
+
+translateX(100px) сдвинуть по х/y,
+rotate(360deg) покрутить, rotateX/rotateY(360deg) относитель x ИЛИ y
+scaleX(1.5) увеличить по х во столько раз или scaleY по y, scale(1.5) в целом
+
+ */

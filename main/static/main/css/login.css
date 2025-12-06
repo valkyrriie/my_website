@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'main-font';
+    src: url('fonts/Gohu.ttf') format('truetype');
+}
+
+* {
+    font-family: 'main-font';
+    padding: 0;
+    margin: 0;
+    cursor: url('img/normal.cur') 0 0, auto;
+}
+
+body {
+    position: absolute;
+    background: #2B222E;
+    margin-left: 800px;
+}
+
+
+.log {
+    margin-top: 80px;
+    margin-left: -40px;
+    font-size: 100px;
+    color: white;
+    text-shadow: 0 0 8px #a78bfa;
+}
+
+.log:hover {
+    transform: rotateY(360deg);
+    transition: 2s;
+}
+
+
+.username_data, .password_data {
+    margin-top: 100px;
+    margin-bottom: 0;
+    margin-left: 50px;
+    color: white;
+    font-size: 40px;
+    text-shadow: 0 0 4px black;
+}
+
+.password_data {
+    margin-top: 20px;
+}
+
+.login_input input,
+.login_input textarea,
+.login_input select {
+    appearance: none;
+    text-decoration: none;
+    outline: none;
+    margin-left: 32px;
+    font-size: 30px;
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    border-radius: 15px;
+    font-weight: bold;
+}
+
+.login_input input:focus,
+.login_input textarea:focus,
+.login_input select:focus,
+.login_input input:hover,
+.login_input textarea:hover,
+.login_input select:hover {
+    box-shadow: 0 0 8px #a78bfa;
+}
+
+.enter {
+    border: 0;
+    margin-top: 40px;
+    margin-left: 80px;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 20px;
+    width: 120px;
+}
+
+.enter:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 8px #a78bfa;
+}

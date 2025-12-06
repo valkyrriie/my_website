@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'main-font';
+    src: url('fonts/Gohu.ttf') format('truetype');
+}
+
+* {
+    font-family: 'main-font';
+    padding: 0;
+    margin: 0;
+    cursor: url('img/normal.cur') 0 0, auto;
+}
+
+body {
+    background: #523B57;
+    position: absolute;
+}
+
+.gif_img {
+    position: absolute;
+    margin-left: -254px;
+    margin-top: 266px;
+}
+
+.frame {
+    margin-top: 210px;
+    margin-left: 400px;
+}
+
+.frame:hover {
+    transform: scale(1.05);
+}
+
+.name, .surname {
+    font-size: 60px;
+    margin-left: 770px;
+    margin-top: -270px;
+    color: white;
+    text-shadow: 0 0 8px #a78bfa;
+}
+
+.surname {
+    margin-top: -10px;
+}
+
+.edit {
+    border: 0;
+    margin-left: 770px;
+    margin-top: 30px;
+    text-decoration: none;
+    font-size: 30px;
+    border-radius: 20px;
+    width: 126px;
+    box-shadow: 0 0 8px #a78bfa;
+}
+
+.edit:hover {
+    box-shadow: 0 0 8px #a78bfa;
+    background: #E586F0;
+    color: white;
+    border-color: white;
+}
+

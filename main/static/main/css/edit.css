@@ -1,0 +1,156 @@
+@font-face {
+    font-family: 'main-font';
+    src: url('fonts/Gohu.ttf') format('truetype');
+}
+
+* {
+    font-family: 'main-font';
+    padding: 0;
+    margin: 0;
+    cursor: url('img/normal.cur') 0 0, auto;
+}
+
+body {
+    background: #2B222E;
+    font-size: 100px;
+    position: absolute;
+
+}
+
+.select {
+    font-size: 60px;
+    color: white;
+    margin-left: 750px;
+    margin-top: 50px;
+    text-shadow: 0 0 10px purple, 0 0 20px white;
+}
+
+.select:hover {
+    transform: scale(1.1);
+    transition: 0.6s;
+}
+
+.choice {
+  margin-left: 870px;
+  margin-top: -150px;
+  width: 150px;
+  text-align-last: center;
+}
+
+.choice select {
+  all: unset;
+  background: white;
+  padding: 7px 17px;
+  font-size: 25px;
+  border: 1.5px solid #7c3aed;
+  border-radius: 15px;
+  appearance: none;
+}
+
+.choice select:focus {
+  border-color: #5b21b6;
+  outline: none;
+  box-shadow: 0 0 12px #a78bfa;
+}
+
+.choice select:hover {
+    transform: scale(1.1);
+    transition: 0.6s;
+}
+
+.deal_row {
+    margin-top: 60px;
+    display: flex;
+    gap: -200px;                /* расстояние между названием и инпутом */
+    margin-bottom: -100px; /* отступ снизу между строками */
+}
+
+.deal_label {
+    font-size: 70px;
+    margin-left: 65%;
+    margin-right: -140px;
+    margin-top: 35px;
+}
+
+.deal_label span{
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    position: relative;
+    animation: bounce 0.4s ease infinite alternate;
+    text-shadow: 0 0 12px #a78bfa;
+}
+
+.deal_label span:nth-child(1) {
+    animation-delay: 0.05s;
+}
+
+.deal_label span:nth-child(2) {
+    left: -32px;
+    animation-delay: 0.1s;
+}
+
+.deal_label span:nth-child(3) {
+    left: -64px;
+    animation-delay: 0.15s;
+}
+
+.deal_label span:nth-child(4) {
+    left: -96px;
+    animation-delay: 0.2s;
+}
+
+.deal_label span:nth-child(5) {
+    left: -128px;
+    animation-delay: 0.25s;
+}
+
+@keyframes bounce {
+    100% {
+        top: -10px;
+    }
+}
+
+.deal_input input,
+.deal_input textarea,
+.deal_input select {
+  margin-left: 60%;
+  width: 150px;
+  padding: 10px 10px;
+  font-size: 20px;
+  text-align-last: center;
+  border: 2px solid black;
+  border-radius: 8px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+  margin-top: -20%;
+}
+
+.deal_input input:focus,
+.deal_input textarea:focus,
+.deal_input select:focus {
+  border-color: #7c3aed;
+  outline: none;
+  box-shadow: 0 0 8px #a78bfa;
+}
+
+.save {
+    appearance: none;
+    text-decoration: none;
+    position: absolute;
+    margin-left: 837px;
+    font-size: 30px;
+    margin-top: 150px;
+    border: 2px solid black;
+    border-radius: 15px;
+    width: 210px;
+    height: 50px;
+}
+
+.save:hover {
+    box-shadow: 0 0 8px #a78bfa;
+    background: #453147;
+    color: white;
+    border-color: white;
+}
+

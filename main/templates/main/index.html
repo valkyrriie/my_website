@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>website</title>
+        <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+        <link rel="icon" type="image/png" href="{% static 'main/images/icon.png' %}">
+    </head>
+    <body>
+    <div id="head-body">
+            <div id="header-block">SCHEDULE</div>
+          </div>
+    <header>
+            <div id="container">
+                <div id="back"></div>
+                <div id="main"><br>Life is like Wi-Fi — sometimes the signal drops, but you just reconnect and keep streaming.
+                                You are basically a human version of a rare Pokémon — valuable, slightly mysterious, and worth chasing.
+                                Mistakes? They’re just plot twists in your autobiography.
+                                So drink your coffee, stand up like you’re about to win a dance battle, and go conquer the day.
+                                Because the world needs your unique brand of awesome… preferably before lunch.
+                                And if things go wrong, just remember: even your phone freezes sometimes — but it still works fine after a restart.
+                                Now go out there and be so brilliant that even your to-do list gets intimidated.</div>
+            </div>
+
+    </header>
+    <a class="look_link" href="{% url 'look_home' %}"><button class="btn1">look</button></a>
+    <a class href="{% url 'avatar_home' %}"><button class="btn2">profile</button></a>
+    </body>
+</html>

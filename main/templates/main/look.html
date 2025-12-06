@@ -1,0 +1,87 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>look..</title>
+        <link rel="stylesheet" href="{% static 'main/css/look.css' %}">
+        <link rel="icon" type="image/png" href="{% static 'main/images/icon.png' %}">
+    </head>
+    <body>
+    <div id="head-body">
+            <div id="header-block">TODAY</div>
+          </div>
+    <header>
+            <div id="container">
+                <div id="back"></div>
+                <div id="main">
+                <!--     ТАБЛИЦА      -->
+                    <!--атрибут border отвечает за толщину обводки таблицы-->
+        <table border="1" width="800px">
+          <!--В тэг thead записываются заголовки таблицы, но он необязателен-->
+          <thead>
+            <!--Тэг tr отвечает за каждый ряд-->
+            <tr>
+              <!--Тэг th отвечает за заголовок, жирный обычно-->
+              <th>Время</th>
+              <th>Дело</th>
+            </tr>
+          </thead>
+
+          <tbody align="center">
+
+          {% for deal in deals %}
+          <tr>
+              <td><p class="svet">{{ deal.time }}</p></td>
+              <td><p class="svet">{{ deal.deal }}</p></td>
+          </tr>
+          {% endfor %}
+<!--            <tr>-->
+<!--              <td><p class="svet">10:00</p></td>-->
+<!--              <td><p class="svet">теория</p></td>-->
+<!--            </tr>-->
+<!--          <tr>-->
+<!--              <td><p class="svet">11:00</p></td>-->
+<!--              <td><p class="svet">проект</p></td>-->
+<!--            </tr>-->
+<!--          <tr>-->
+<!--              <td><p class="svet">12:00</p></td>-->
+<!--              <td><p class="svet">проект</p></td>-->
+<!--            </tr>-->
+<!--          <tr>-->
+<!--              <td><p class="svet">13:00</p></td>-->
+<!--              <td><p class="svet">перерыв</p></td>-->
+<!--            </tr>-->
+<!--          <tr>-->
+<!--              <td><p class="svet">14:00</p></td>-->
+<!--              <td><p class="svet">проект</p></td>-->
+<!--            </tr>-->
+<!--          <tr>-->
+<!--              <td><p class="svet">15:00</p></td>-->
+<!--              <td><p class="svet">проект</p></td>-->
+<!--            </tr>-->
+<!--          <tr>-->
+<!--              <td><p class="svet">16:00</p></td>-->
+<!--              <td><p class="svet">проект</p></td>-->
+<!--            </tr>-->
+<!--          <tr>-->
+<!--              <td><p class="svet">17:00</p></td>-->
+<!--              <td><p class="svet">проект</p></td>-->
+<!--            </tr>-->
+
+
+          </tbody>
+
+
+
+        </table>
+
+                </div>
+            </div>
+
+    </header>
+    <a class='back_link' href="{% url 'home' %}"><button class="btn1">back</button></a>
+    <a class='back_link' href="{% url 'edit' %}"><button class="btn2">edit</button></a>
+    </body>
+</html>
