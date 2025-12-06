@@ -10,7 +10,7 @@
 <body>
     <img class='gif_img' src="{% static 'main/css/img/hh.gif' %}" alt="Анимация" width="200" height="200">
     <img class='frame' src="{% static 'main/css/img/frame.png' %}" width="313" height="313">
-    <p class="name">your_name</p>
+    <p class="name">{{ user.username }}</p>
     <p class="surname">your_surname</p>
     <button class="edit">avatar</button>
 </body>
